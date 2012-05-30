@@ -1,3 +1,13 @@
+#
+# Basic Quicksort
+# Time: O(n log n) O(n2) worst-case
+# Space: O(n)
+#
+# List is split into two at a pivot point half way through the list
+# Items smaller than the pivot go into one list, larger items in the other
+# The algorithm is called recursively on the two lists
+#
+
 import random
 
 # size of list
@@ -14,11 +24,7 @@ while len(list) < max:
 		rand = round(random.random() * 100)
 	list.append(rand)
 
-#
-# List is split into two at a pivot point half way through the list
-# Items smaller than the pivot go into one list, larger items in the other
-# The algorithm is called recursively on the two lists
-#
+# sort the list
 def quicksort(toSort):
 	if len(toSort) <= 1: return toSort # no need to sort an empty list
 	
@@ -37,4 +43,4 @@ def quicksort(toSort):
 	return (quicksort(lower) + [pivot] + quicksort(higher))
 
 sorted = quicksort(list)	
-print 'sorted list:', sorted
+print 'SORTED GUV:', sorted
