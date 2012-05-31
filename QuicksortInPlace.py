@@ -13,8 +13,7 @@
 import Random
 
 # the list to sort
-listToSort = Random.createRandomList(10)
-sorted = []
+listToSort = Random.createRandomList(20)
 
 # swaps the two elements in the passed list
 def swap(list, index1, index2):
