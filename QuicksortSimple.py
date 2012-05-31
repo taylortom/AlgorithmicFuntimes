@@ -8,21 +8,11 @@
 # The algorithm is called recursively on the two lists
 #
 
-import random
-
-# size of list
-max = 10000
+import Random
 
 # the list to sort
-list = []
+list = Random.createRandomList(10)
 sorted = []
-
-# create a list of random numbers bounded by max
-while len(list) < max:
-	rand = round(random.random() * 100)
-	while rand > max:
-		rand = round(random.random() * 100)
-	list.append(rand)
 
 # sort the list
 def quicksort(toSort):

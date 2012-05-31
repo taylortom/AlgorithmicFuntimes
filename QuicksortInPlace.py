@@ -10,21 +10,11 @@
 # is placed in its final position.
 #
 
-import random
-
-# size of list
-max = 10
+import Random
 
 # the list to sort
-listToSort = []
+listToSort = Random.createRandomList(10)
 sorted = []
-
-# create a list of random numbers bounded by max
-while len(listToSort) < max:
-	rand = round(random.random() * max)
-	while rand > max:
-		rand = round(random.random() * max)
-	listToSort.append(rand)
 
 # swaps the two elements in the passed list
 def swap(list, index1, index2):
@@ -52,9 +42,9 @@ def quicksort(list, left, right):
 	if left < right:
 		
 		# get a pivot index
-		pivotIndex = int(round(random.random() * max))
+		pivotIndex = Random.getRandomInt(len(listToSort))
 		while pivotIndex < left or pivotIndex > right: 
-			pivotIndex = int(round(random.random() * max))
+			pivotIndex = Random.getRandomInt(len(listToSort))
 		
 		pivotNewIndex = partition(list, left, right, pivotIndex)
 
